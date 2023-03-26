@@ -235,8 +235,28 @@ body {
 }
 
 #edit_profile {
+    width: 35%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+#edit_profile input {
+    padding: 10px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+#edit_profile label {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#edit_profile input[type='file'] {
+    color: transparent;
+    width: 25%;
+    padding: 15px;
+    border-radius: 15px;
 }

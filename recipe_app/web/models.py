@@ -6,6 +6,7 @@ from recipe_app.enums import Enums
 
 
 class Recipes(models.Model):
+    photo = models.ImageField(null=False, blank=False)
     name = models.CharField(max_length=255, validators=[MinLengthValidator(4)], null=False, blank=False)
     recipe_type = models.CharField(max_length=255, choices=Enums.recipe_enum, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
