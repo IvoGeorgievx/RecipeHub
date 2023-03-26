@@ -1,0 +1,33 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href='{% static 'css/style.css' %}'>
+    <script src="{% static 'scripts/animate_forms.js' %}"></script>
+    <title>index</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="{% url 'search recipes' %}">Search Recipes</a></li>
+        {% if not user.is_authenticated %}
+            <button type="submit" class="login" id="login_but"><a href="{% url 'sign up' %}">Register</a></button>
+            <button type="submit" class="login" id="reg_but"><a href="{% url 'sign in' %}">Login</a></button>
+        {% else %}
+            <li><a href="{% url 'user details' pk=request.user.pk%}">Profile</a></li>
+            <li><a href="{% url 'logout'%}">Logout</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div id="example">
+        <form class="recipe_form" method="post" action="{% url 'create recipe' %}">
+            {{ form }}
+            {% csrf_token %}
+            <input type="submit" value="Create Recipe">
+
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div id="login_div">
+    {% if not user.is_authenticated %}
+        <form id="login_form" method="post" action="{% url 'sign in' %}">
+            {{ form }}
+            {% csrf_token %}
+            <input class="login_submit" type="submit" value="Log In">
+        </form>
+    {% endif %}
+    </div>
+
+{% endblock %}

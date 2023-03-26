@@ -1,0 +1,242 @@
+
+body {
+    background-image: url("../images/d36d462db827833805497d9ea78a1343.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+.nav-links {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 24px 19px;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: yellow;
+    color: black;
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+.login {
+    width: 110px;
+    padding: 10px;
+    border-radius: 13px;
+    font-weight: bold;
+    color: blue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.login a {
+    text-decoration: none;
+}
+
+.login:hover, .login:focus {
+    background-color: yellow;
+    outline: none;
+}
+
+#register_div {
+    margin: 0 auto;
+    background-color: transparent;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#register_form input[type="text"],
+#register_form input[type="email"],
+#register_form input[type="password"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#register_input:hover {
+    background-color: yellow;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+#login_div {
+    margin: 0 auto;
+    background-color: transparent;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_form input[type="text"],
+#login_form input[type="password"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login_submit {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_submit:hover {
+    background-color: yellow;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.search_container {
+    margin: 0 auto;
+    background-color: transparent;
+    width: 50%;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#search_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#search_form input[type="text"] {
+    width: 55%;
+    margin: 10px;
+    padding: 13px;
+    border-radius: 13px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+#search_form input[type="submit"] {
+    padding: 9px;
+    width: 88px;
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    background-color: cadetblue;
+    color: white
+}
+
+#search_form input[type="submit"]:hover {
+    color: black;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.profile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+#profile {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#profile li {
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    letter-spacing: 2px
+
+}
+
+#profile img {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+#profile img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#profile button {
+    width: 95px;
+    height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#profile button:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#edit_profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

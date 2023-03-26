@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="profile_container">
+        <form method="post" action="{% url 'user details' pk=object.pk %}" enctype="multipart/form-data">
+            {{ form }}
+            {% csrf_token %}
+        </form>
+        <ul id="profile">
+            {% if object.photo %}
+                <img src="{{ object.photo.url }}" alt="profile photo">
+            {% endif %}
+            {% if object.first_name %}
+                <li>{{ object.first_name }}</li>
+            {% endif %}
+            {% if object.last_name %}
+                <li>{{ object.last_name }}</li>
+            {% endif %}
+            {% if object.gender %}
+                <li>{{ object.gender }}</li>
+            {% endif %}
+            {% if object.email %}
+                <li>{{ object.email }}</li>
+            {% endif %}
+{#            <button><a href="{% url 'edit profile' pk=object.pk %}">Edit Profile</a></button>#}
+            <button onclick=location.href="{% url 'edit profile' pk=object.pk %}">Edit Profile</button>
+
+        </ul>
+    </div>
+
+{% endblock %}

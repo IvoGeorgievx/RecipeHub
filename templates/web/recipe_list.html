@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="all_recipes">
+
+        <ul class="ul_recipes">
+            {% for object in object_list %}
+                <li class="recipes">{{ object }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

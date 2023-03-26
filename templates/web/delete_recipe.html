@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class = form_container>
+    <form class="recipe_form" method="post" action="{% url 'delete recipe' pk=object.pk %}">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+</div>
+
+{% endblock %}
