@@ -44,15 +44,18 @@ class RecipesView(views.ListView):
         return Recipes.objects.all()
 
 
+class RecipeView(views.DetailView):
+    template_name = 'web/recipe_detail.html'
+    model = Recipes
+
+
 class SearchRecipeView(LoginRequiredMixin, views.ListView):
     template_name = 'web/search_form.html'
     model = Recipes
+
 
     def get_queryset(self):
         query = self.request.GET.get('query')
         if query:
             return Recipes.objects.filter(name__icontains=query)
-        return Recipes.objects.none()
-
-
-
+        return Recipes.objects.all()

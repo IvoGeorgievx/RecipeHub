@@ -54,3 +54,6 @@ class UserEditProfileView(views.UpdateView):
 class UserRecipesView(views.ListView):
     template_name = 'auth/user-recipes.html'
     model = Recipes
+
+    def get_queryset(self):
+        return Recipes.objects.filter(created_by_id=self.request.user.pk).all()

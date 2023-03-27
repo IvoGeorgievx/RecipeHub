@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class = form_container>
+<div class = "form_container">
     <form class="recipe_form" method="post" action="{% url 'edit recipe' pk=object.pk %}">
         {{ form }}
         {% csrf_token %}

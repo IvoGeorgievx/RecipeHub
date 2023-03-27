@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="profile_container">
+        <ul class="profile">
+            <li><img src="{{ object.photo.url }}" alt="recipe img"></li>
+            <li>{{ object.name }}</li>
+            <li>{{ object.description }}</li>
+            <li>Created by: {{ object.created_by }}</li>
+        </ul>
+    </div>
+
+{% endblock %}

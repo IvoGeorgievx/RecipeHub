@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="user_recipe_container">
-        <ul class="recipe_list">
+    <div class="profile_container">
+        <ul class="profile">
             {% for object in object_list %}
-                <li class="recipe">{{ object }}</li>
+                <li class="recipe"><a href="{% url 'recipe details' pk=object.pk %}" style="text-decoration: none">{{ object }}</a> </li>
             {% endfor %}
         </ul>
     </div>

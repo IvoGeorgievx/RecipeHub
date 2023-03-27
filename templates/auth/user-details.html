@@ -6,7 +6,7 @@
             {{ form }}
             {% csrf_token %}
         </form>
-        <ul id="profile">
+        <ul class="profile">
             {% if object.photo %}
                 <img src="{{ object.photo.url }}" alt="profile photo">
             {% endif %}
@@ -22,8 +22,9 @@
             {% if object.email %}
                 <li>{{ object.email }}</li>
             {% endif %}
-{#            <button><a href="{% url 'edit profile' pk=object.pk %}">Edit Profile</a></button>#}
-            <button onclick=location.href="{% url 'edit profile' pk=object.pk %}">Edit Profile</button>
+
+            <button onclick=location.href="{% url 'edit profile' pk=object.pk %}">Edit</button>
+            <button onclick=location.href="{% url 'user recipes' %}">My Recipes</button>
 
         </ul>
     </div>

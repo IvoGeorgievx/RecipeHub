@@ -13,11 +13,36 @@ body {
     color: #fff;
     overflow: hidden;
     border-radius: 15px;
-
+    display: flex;
+    align-items: center;
+    height: 60px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 88px;
+  height: 100%;
+  padding: 10px;
+}
+
+.logo img {
+  height: 50px; /* adjust this value as needed */
+  width: auto;
+  margin-right: 10px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 44px; /* adjust this value as needed */
+  color: white;
+}
+
+
 .nav-links {
-    float: right;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,15 +50,21 @@ body {
 
 .nav-links li {
     display: inline-block;
+    margin-right: 10px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
 }
 
 .nav-links li a {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 24px 19px;
+    padding: 10px;
     text-decoration: none;
 }
+
 
 .nav-links li a:hover {
     background-color: yellow;
@@ -142,8 +173,9 @@ body {
     background-color: transparent;
     width: 50%;
     position: absolute;
-    top: 16%;
+    top: 50%;
     left: 50%;
+    height: 500px;
     transform: translate(-50%, -50%);
 }
 
@@ -186,7 +218,19 @@ body {
     height: 60vh;
 }
 
-#profile {
+.result_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.result_div li {
+    text-decoration: none;
+}
+
+.profile {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -195,7 +239,7 @@ body {
     width: 50%;
 }
 
-#profile li {
+.profile li {
     font-weight: bold;
     font-size: 24px;
     text-decoration: none;
@@ -203,24 +247,24 @@ body {
     margin: 6px;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    letter-spacing: 2px
+    letter-spacing: 2px;
+    word-wrap: break-word;
 
 }
 
-#profile img {
-    border-radius: 50%;
+.profile img {
+    border-radius: 25%;
     height: 300px;
     width: 300px;
     object-fit: cover;
 }
 
-#profile img:hover {
+.profile img:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-#profile button {
-    width: 95px;
-    height: 35px;
+.profile button {
+    width: 105px;
     margin-top: 10px;
     cursor: pointer;
     border-radius: 15px;
@@ -228,7 +272,7 @@ body {
     font-weight: bold;
 }
 
-#profile button:hover {
+.profile button:hover {
     background-color: yellow;
     color: black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -256,7 +300,108 @@ body {
 
 #edit_profile input[type='file'] {
     color: transparent;
-    width: 25%;
+    width: 15%;
     padding: 15px;
     border-radius: 15px;
 }
+
+#edit_profile input[type='submit'] {
+    width: 25%;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#edit_profile input[type='submit']:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    width: 25%;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.recipe_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe_form input[type='file'] {
+    color: transparent;
+    width: 30%;
+}
+
+.recipe_form label {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.recipe_form input[type='text'] {
+    opacity: 0.5;
+    width: 66%;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 15px;
+
+}
+
+#recipe_description {
+    opacity: 0.5;
+    border-radius: 15px;
+    resize: none;
+    width: 100%;
+}
+
+.recipe_form input[type='submit'] {
+    width: 51%;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.recipe_form input[type='submit']:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#recipe_type {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+

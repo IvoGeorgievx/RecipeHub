@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div id="example">
-        <form class="recipe_form" method="post" action="{% url 'create recipe' %}">
+    <div class="profile_container">
+        <form class="recipe_form" method="post" action="{% url 'create recipe' %}"
+        enctype="multipart/form-data">
             {{ form }}
             {% csrf_token %}
             <input type="submit" value="Create Recipe">

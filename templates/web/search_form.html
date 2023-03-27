@@ -6,11 +6,18 @@
             <input id="search_field" name="query" type="text" placeholder="Search" autocomplete="off" autofocus>
             <input id="search_button" type="submit" value="Search"/>
         </form>
-
+        {% block test %}
+        <div class="result_div">
 
             {% for object in object_list %}
-                <li> {{ object }} </li>
+                <ul id="results">
+                <li> {{ object.name }} </li>
+                <li> {{ object.recipe_type }} </li>
+                <li>More Details: <a href="{% url 'recipe details' pk=object.pk %}" style="text-decoration: none">Here</a></li>
+            </ul>
             {% endfor %}
+        </div>
+        {% endblock %}
 
 
     </div>

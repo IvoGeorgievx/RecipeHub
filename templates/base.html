@@ -13,6 +13,9 @@
 </head>
 <body>
 <nav class="navbar">
+<div class="logo">
+    <a href="#">Recipe Hub<img src="{% static 'images/hat1.png' %}" alt="Logo"></a>
+</div>
     <ul class="nav-links">
         <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="">About</a></li>
@@ -21,6 +24,7 @@
             <button type="submit" class="login" id="login_but"><a href="{% url 'sign up' %}">Register</a></button>
             <button type="submit" class="login" id="reg_but"><a href="{% url 'sign in' %}">Login</a></button>
         {% else %}
+            <li><a href="{% url 'create recipe'%}">Create Recipe</a></li>
             <li><a href="{% url 'user details' pk=request.user.pk%}">Profile</a></li>
             <li><a href="{% url 'logout'%}">Logout</a></li>
         {% endif %}
